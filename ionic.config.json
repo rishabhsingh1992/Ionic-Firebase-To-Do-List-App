@@ -1,0 +1,7 @@
+{
+  "name": "Ionic-Firebase-To-Do-List-App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

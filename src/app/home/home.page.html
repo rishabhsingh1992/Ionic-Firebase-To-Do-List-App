@@ -1,0 +1,61 @@
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row style="background-color: #f44336; padding: 30px 40px">
+      <ion-col>
+        <div class="ion-text-center">
+          <h1 style="color: #fff">To Do List App</h1>
+        </div>
+        <form
+          (ngSubmit)="addTodo()"
+          style="display: flex; justify-content: center"
+        >
+          <input
+            type="text"
+            name="inputTask"
+            id="inputTask"
+            [(ngModel)]="inputTask"
+            style="padding: 10px; border: none"
+          />
+          <button type="submit" class="inputTaskButton" style="padding: 10px">
+            Add
+          </button>
+        </form>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list lines="none">
+          <ion-item *ngFor="let item of todoItems$ | async">
+            <ion-label class="todoItem">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <span
+                  [class.checked]="item.isChecked"
+                  (click)="updateTodo(item)"
+                >
+                  {{ item.todoItem }}
+                </span>
+                <ion-icon
+                  class="deleteButton"
+                  name="close-circle-outline"
+                  (click)="deleteTodo(item)"
+                ></ion-icon>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- Study Code -->
+
+ 
+</ion-content>

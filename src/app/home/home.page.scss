@@ -1,0 +1,34 @@
+.inputTaskButton {
+  background-color: #d9d9d9;
+
+  &:hover {
+    background-color: #bbb;
+    cursor: pointer;
+  }
+}
+
+.todoItem {
+  flex: 1;
+  padding: 20px;
+
+  &.checked {
+    background-color: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+
+  &:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+}
+
+.deleteButton {
+  // height: 100%;
+  // padding: 0 20px;
+
+  &:hover {
+    background-color: #f44336;
+    color: #fff;
+  }
+}
